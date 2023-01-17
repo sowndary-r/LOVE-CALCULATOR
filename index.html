@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Love Calculator</title>
+</head>
+<style>
+    body{
+        background-image: url("images/bg.webp");
+        font-family:cursive;
+        color: black;
+    }
+    
+    .box{
+       height:500px;
+       width:400px;
+       margin: 200px auto;
+       background-color: rgb(255,192,203,0.5);
+        border-radius:10px;
+        padding:30px;
+
+    }
+    .form{
+        font-size: 20px;
+    }
+    .button{
+        text-align: center;
+        margin-top: 20px;
+        background-color:#bb0155;
+        border-radius:5px;
+        height:30px;
+        font-weight:bolder;
+        padding: 5px;
+        letter-spacing: 1px;
+        border: none;
+        background-color: #a30707;
+    }
+    button:hover{
+        cursor:pointer;
+    }
+   #result{
+    text-align: center;
+    color:#d60478;
+    margin-top:20px;
+    font-size:32px;
+   }
+</style>
+<body> 
+   <div class="box">
+    <h1 style="color : #a30707">LOVE CALCULATOR!!</h1>
+    <h2 style="color: #db146e">Find out how much your crush loves you!!</h2>
+    <div class="form">
+        <label for="men">Enter your name</label><br><br>
+        <input type="text" placeholder="Eg : Surya" id="men" required><br><br><br>
+        <label for="women">Enter your crush name</label><br><br>
+        <input type="text" placeholder="Eg:Jyothika" id="women" required>
+    </div>
+    
+    <div class="button">
+        <button type="submit" onclick="calculate(80,100)">CALCULATE</button>
+   </div>
+   <div id="result">
+
+   </div>
+</div>
+<script>
+    function calculate(max,min)
+    {
+
+    let member1=document.getElementById("men").value;
+    let member2=document.getElementById("women").value;
+    console.log(member1);
+    if(member1!=="" && member2!=="")
+   result.innerHTML=member2 +" loves "+ member1 + " "+Math.floor((Math.random()*(max-min+1)) + min) +"%"; 
+   else
+   result.innerHTML="Please enter the names :)";
+    }
+</script>
+</body>
+</html>
